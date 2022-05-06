@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:banky/model/datas.dart';
 import 'package:flutter/material.dart';
 
 class Active extends StatelessWidget {
@@ -11,7 +12,7 @@ class Active extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 25,
+            height: 20,
           ),
           Container(
             margin: EdgeInsets.only(left: 10, right: 10),
@@ -27,10 +28,54 @@ class Active extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 25,
+            height: 400,
+            child: ListView.builder(
+                itemCount: listData.length,
+                itemBuilder: (context, index) {
+                  MyDatas myDatas = listData[index];
+                  return Card(
+                    elevation: 2,
+                    child: Container(
+                      height: 70,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Row(
+                              
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                CircleAvatar(
+                                  
+                                  radius: 25,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset(
+                                    myDatas.imageURL,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 15,
+                                ),
+                                Text(
+                                  myDatas.myTitle,
+                                  style: TextStyle(
+                                      fontSize: 15, fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Checkbox(
+                              value: true,
+                              onChanged: (val) {
+                                print(val);
+                              })
+                        ],
+                      ),
+                    ),
+                  );
+                }),
           ),
-
-          CheckboxListTile(value: false, onChanged: (val){})
         ],
       ),
     );
