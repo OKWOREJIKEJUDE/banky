@@ -3,8 +3,22 @@
 import 'package:banky/model/datas.dart';
 import 'package:flutter/material.dart';
 
-class Active extends StatelessWidget {
+class Active extends StatefulWidget {
   const Active({Key? key}) : super(key: key);
+
+  @override
+  State<Active> createState() => _ActiveState();
+}
+
+class _ActiveState extends State<Active> {
+  bool mon = false;
+  bool tue = false;
+  bool wed = false;
+  bool thur = false;
+  bool fri = false;
+  bool sat = false;
+  bool sun = false;
+  bool mids = false;
 
   @override
   Widget build(BuildContext context) {
@@ -43,11 +57,9 @@ class Active extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(left: 10),
                             child: Row(
-                              
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 CircleAvatar(
-                                  
                                   radius: 25,
                                   backgroundColor: Colors.white,
                                   child: Image.asset(
@@ -60,13 +72,14 @@ class Active extends StatelessWidget {
                                 Text(
                                   myDatas.myTitle,
                                   style: TextStyle(
-                                      fontSize: 15, fontWeight: FontWeight.bold),
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
                           ),
                           Checkbox(
-                              value: true,
+                              value: false,
                               onChanged: (val) {
                                 print(val);
                               })

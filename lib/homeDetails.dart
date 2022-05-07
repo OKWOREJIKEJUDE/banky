@@ -10,6 +10,7 @@ class Homedetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
+      
       length: 2,
       child: Scaffold(
         body: Padding(

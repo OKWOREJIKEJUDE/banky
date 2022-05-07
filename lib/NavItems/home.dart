@@ -2,6 +2,7 @@
 
 import 'package:banky/content_model.dart';
 import 'package:banky/homeDetails.dart';
+import 'package:banky/secondhomeDetails2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -116,7 +117,7 @@ class Home extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Homedetails()));
+                                builder: (context) => SecondHomeDetails()));
                       },
                       child: Container(
                         margin: EdgeInsets.only(left: 10, right: 10),
