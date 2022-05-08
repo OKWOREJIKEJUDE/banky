@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:banky/content_model.dart';
-import 'package:banky/homeDetails.dart';
-import 'package:banky/secondhomeDetails2.dart';
+import 'package:banky/model/content_model.dart';
+import 'package:banky/secondhomeDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -10,7 +9,7 @@ class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   static List<String> images = [
-    'assets/redVisaCard.png',
+    'assets/master1.png',
     'assets/redVerveCard.png',
     'assets/blueVisaCard0.png'
   ];
@@ -159,44 +158,39 @@ class Home extends StatelessWidget {
                                   right: 30, left: 20, top: 20, bottom: 5),
                               child: Container(
                                 width: 250,
-                                child: Row(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              contItems.title,
-                                              style: TextStyle(
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            Text(
-                                              contItems.percent,
-                                              style: TextStyle(
-                                                  fontSize: 10,
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 15,
-                                        ),
-                                        Container(
-                                          height: 5,
-                                          color: Colors.black,
-                                        ),
-                                        SizedBox(
-                                          height: 15,
+                                        Text(
+                                          contItems.title,
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
                                         ),
                                         Text(
-                                          contItems.date,
-                                        ),
+                                          contItems.percent,
+                                          style: TextStyle(
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.bold),
+                                        )
                                       ],
+                                    ),
+                                    SizedBox(
+                                      height: 15,
+                                    ),
+                                    Container(
+                                      height: 5,
+                                      color: Colors.black,
+                                    ),
+                                    SizedBox(
+                                      height: 15,
+                                    ),
+                                    Text(
+                                      contItems.date,
                                     ),
                                   ],
                                 ),
