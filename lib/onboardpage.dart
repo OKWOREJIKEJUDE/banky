@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:banky/bottomNavigation.dart';
-
+import 'package:banky/signin.dart';
 import 'package:banky/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -82,7 +82,8 @@ class OnBoardPage extends StatelessWidget {
                       //height: 50,
 
                       onPressed: () {
-                       
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => SignIn()));
                       },
                       child: Text("Sign Up",
                           style: TextStyle(fontSize: 15, color: Colors.blue)),
