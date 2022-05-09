@@ -1,8 +1,5 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'dart:ui';
-
-import 'package:banky/model/datas.dart';
 import 'package:flutter/material.dart';
 
 class SecondHomeDetails extends StatefulWidget {
@@ -14,7 +11,13 @@ class SecondHomeDetails extends StatefulWidget {
 
 class _SecondHomeDetailsState extends State<SecondHomeDetails>
     with TickerProviderStateMixin {
-  bool mycheck = false;
+  bool mon = false;
+  bool tue = false;
+  bool wed = false;
+  bool thur = false;
+  bool fri = false;
+  bool sat = false;
+  bool sun = false;
   @override
   Widget build(BuildContext context) {
     TabController tabController = TabController(length: 8, vsync: this);
@@ -118,8 +121,7 @@ class _SecondHomeDetailsState extends State<SecondHomeDetails>
                 height: double.maxFinite,
                 child: TabBarView(controller: tabController, children: [
                   //Text("active"),
-                  Container(
-                      child: Column(
+                  Column(
                     children: [
                       SizedBox(
                         height: 40,
@@ -133,53 +135,227 @@ class _SecondHomeDetailsState extends State<SecondHomeDetails>
                         ),
                       ),
                       SizedBox(
-                        height: 5,
+                        height: 25,
                       ),
-                      Container(
-                        height: double.maxFinite,
-                        width: double.infinity,
-                        child: ListView.builder(
-                            itemCount: listData.length,
-                            itemBuilder: (context, index) {
-                              MyDatas myDatas = listData[index];
-                              return Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Row(
-                                    children: [
-                                      CircleAvatar(
-                                        radius: 25,
-                                        backgroundColor: Colors.white,
-                                        child: Image.asset(myDatas.imageURL),
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        myDatas.myTitle,
-                                        style: TextStyle(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.normal),
-                                      )
-                                    ],
-                                  ),
-                                  Checkbox(
-                                      value: mycheck,
-                                      onChanged: (newValue) {
-                                        setState(() {
-                                          mycheck = newValue!;
-                                          if (mycheck) {
-                                          } else {}
-                                        });
-                                      }),
-                                ],
-                              );
-                            }),
-                      )
-                    
+                      Card(
+                        elevation: 2,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 25,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset("assets/bank1.jpg"),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "Cash Balance",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ],
+                            ),
+                            Checkbox(
+                                value: mon,
+                                onChanged: (newValue) {
+                                  setState(() {
+                                    mon = newValue!;
+                                    tue = false;
+                                    wed = false;
+                                    thur = false;
+                                    fri = false;
+                                    sat = false;
+                                    sun = false;
+                                    if (mon) {
+                                    } else {}
+                                  });
+                                }),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Card(
+                        elevation: 2,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 25,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset("assets/bank2.jpg"),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "Cash Equivalents",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ],
+                            ),
+                            Checkbox(
+                                value: tue,
+                                onChanged: (newValue) {
+                                  setState(() {
+                                    tue = newValue!;
+                                    mon = false;
+                                    wed = false;
+                                    thur = false;
+                                    fri = false;
+                                    sat = false;
+                                    sun = false;
+                                    if (wed) {
+                                    } else {}
+                                  });
+                                }),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Card(
+                        elevation: 2,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 25,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset("assets/bank4.jpg"),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "Certificate of Deposit",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ],
+                            ),
+                            Checkbox(
+                                value: wed,
+                                onChanged: (newValue) {
+                                  setState(() {
+                                    wed = newValue!;
+                                    mon = false;
+                                    tue = false;
+                                    thur = false;
+                                    fri = false;
+                                    sat = false;
+                                    sun = false;
+                                    if (wed) {
+                                    } else {}
+                                  });
+                                }),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Card(
+                        elevation: 2,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 25,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset("assets/bank3.jpg"),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "Shares",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ],
+                            ),
+                            Checkbox(
+                                value: thur,
+                                onChanged: (newValue) {
+                                  setState(() {
+                                    thur = newValue!;
+                                    mon = false;
+                                    wed = false;
+                                    tue = false;
+                                    fri = false;
+                                    sat = false;
+                                    sun = false;
+                                    if (thur) {
+                                    } else {}
+                                  });
+                                }),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Card(
+                        elevation: 2,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 25,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset("assets/bank4.jpg"),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "ATM",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ],
+                            ),
+                            Checkbox(
+                                value: fri,
+                                onChanged: (newValue) {
+                                  setState(() {
+                                    fri = newValue!;
+                                    mon = false;
+                                    wed = false;
+                                    thur = false;
+                                    tue = false;
+                                    sat = false;
+                                    sun = false;
+                                    if (fri) {
+                                    } else {}
+                                  });
+                                }),
+                          ],
+                        ),
+                      ),
                     ],
-                  )),
+                  ),
 
                   Container(
                       child: Column(
