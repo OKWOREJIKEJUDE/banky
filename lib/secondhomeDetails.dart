@@ -144,10 +144,15 @@ class _SecondHomeDetailsState extends State<SecondHomeDetails>
                           children: [
                             Row(
                               children: [
+                                // CircleAvatar(
+                                //   radius: 25,
+                                //   backgroundColor: Colors.white,
+                                //   child: Image.asset("assets/bank1.jpg"),
+                                // ),
                                 CircleAvatar(
                                   radius: 25,
-                                  backgroundColor: Colors.white,
-                                  child: Image.asset("assets/bank1.jpg"),
+                                  backgroundImage:
+                                      AssetImage("assets/bank1.jpg"),
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -191,7 +196,8 @@ class _SecondHomeDetailsState extends State<SecondHomeDetails>
                                 CircleAvatar(
                                   radius: 25,
                                   backgroundColor: Colors.white,
-                                  child: Image.asset("assets/bank2.jpg"),
+                                  backgroundImage:
+                                      AssetImage("assets/bank2.jpg"),
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -235,7 +241,8 @@ class _SecondHomeDetailsState extends State<SecondHomeDetails>
                                 CircleAvatar(
                                   radius: 25,
                                   backgroundColor: Colors.white,
-                                  child: Image.asset("assets/bank4.jpg"),
+                                  backgroundImage:
+                                      AssetImage("assets/bank4.jpg"),
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -279,7 +286,8 @@ class _SecondHomeDetailsState extends State<SecondHomeDetails>
                                 CircleAvatar(
                                   radius: 25,
                                   backgroundColor: Colors.white,
-                                  child: Image.asset("assets/bank3.jpg"),
+                                  backgroundImage:
+                                      AssetImage("assets/bank3.jpg"),
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -323,7 +331,8 @@ class _SecondHomeDetailsState extends State<SecondHomeDetails>
                                 CircleAvatar(
                                   radius: 25,
                                   backgroundColor: Colors.white,
-                                  child: Image.asset("assets/bank4.jpg"),
+                                  backgroundImage:
+                                      AssetImage("assets/bank2.jpg"),
                                 ),
                                 SizedBox(
                                   width: 10,
